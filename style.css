@@ -1,0 +1,88 @@
+body{
+    padding: 0 ;
+    margin: 0;
+    background-image: url("bkg.png");
+}
+* {
+    box-sizing: border-box;
+}
+header {
+  text-align: center;
+  max-width: 1400px;
+  background-color: rebeccapurple;
+  grid-area: h;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li{
+    list-style-type:none;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline;
+    padding: 15px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+header, nav,article, footer, aside{
+    border: 1px solid gray;
+    padding:20px;
+}
+nav{
+    grid-area: n;
+    background-color: aquamarine;
+    transition: 0s background-color;
+}
+nav a:hover{ 
+	background-color: #ffffff; 
+	color: #000000; 
+    transition-delay:0.05s;
+} 
+article{
+    grid-area: a;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #2196F3;
+    padding: 30px;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+    text-align: center;
+}
+.ye{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+main {
+  width: 50%;
+  padding: 10px;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:  1fr 2fr 1fr;
+  grid-template-areas: "h h h"
+                       "n n n"
+                       "a a as"
+                       "f f f" ;
+  background-color: white;
+}
+
+@media screen and (max-width:400px){
+    main{
+        grid-template-columns: 1fr;
+    grid-template-areas: "h"
+                         "a"
+                         "n"
+                         "as"
+                         "f";
+    }
+}
